@@ -1,0 +1,36 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package praktikum6.Tugas6;
+
+/**
+ *
+ * @author ThinkPad T14 G2
+ */
+public class Produk {
+    protected String nama;
+    protected double harga;
+
+    public Produk(String nama, double harga) {
+        this.nama = nama;
+        this.harga = harga;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public double getHarga() {
+        return harga;
+    }
+
+    // Metode diskon default, akan di-override oleh subclass
+    public double hitungDiskon() {
+        return 0.0;
+    }
+
+    public double getHargaSetelahDiskon() {
+        return harga - hitungDiskon();
+    }
+}
